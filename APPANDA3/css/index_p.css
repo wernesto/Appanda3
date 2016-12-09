@@ -1,0 +1,433 @@
+/*--- Avanquest WebEasy Page Style ---*/
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  width: auto;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  background: #39b1cc;
+  background: -moz-linear-gradient(top, #51bbd2 0%, #2d97af 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #51bbd2), color-stop(100%, #2d97af));
+  background: -webkit-linear-gradient(top, #51bbd2 0%, #2d97af 100%);
+  background: -o-linear-gradient(top, #51bbd2 0%, #2d97af 100%);
+  background: -ms-linear-gradient(top, #51bbd2 0%, #2d97af 100%);
+  background: linear-gradient(to bottom, #51bbd2 0%, #2d97af 100%);
+}
+#cssmenu > ul {
+  background: url('images/bg.png');
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.05);
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu > ul > li > a {
+  padding: 18px 25px 21px 25px;
+  border-right: 1px solid rgba(80, 80, 80, 0.12);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #bdfdff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li > a:hover,
+#cssmenu > ul > li.active > a {
+  color: #ffffff;
+  background: #32a9c3;
+  background: rgba(0, 0, 0, 0.1);
+}
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 45px;
+}
+#cssmenu > ul > li.has-sub > a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top-color: #bdfdff;
+  right: 17px;
+  top: 22px;
+}
+#cssmenu > ul > li.has-sub.active > a::after,
+#cssmenu > ul > li.has-sub:hover > a {
+  border-top-color: #ffffff;
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+  top: 60px;
+  padding-top: 6px;
+  font-size: 13px;
+  opacity: 0;
+  -webkit-transition: top 0.2s ease, opacity 0.2s ease-in;
+  -moz-transition: top 0.2s ease, opacity 0.2s ease-in;
+  -ms-transition: top 0.2s ease, opacity 0.2s ease-in;
+  -o-transition: top 0.2s ease, opacity 0.2s ease-in;
+  transition: top 0.2s ease, opacity 0.2s ease-in;
+}
+#cssmenu > ul > li > ul::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #f2ffff;
+  top: -4px;
+  left: 20px;
+}
+#cssmenu ul ul ul::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right-color: #f2ffff;
+  top: 11px;
+  left: -4px;
+}
+#cssmenu > ul > li > ul {
+  top: 120px;
+}
+#cssmenu > ul > li:hover > ul {
+  top: 52px;
+  left: 0;
+  opacity: 1;
+}
+#cssmenu ul ul ul {
+  padding-top: 0;
+  padding-left: 6px;
+}
+#cssmenu ul ul > li:hover > ul {
+  left: 180px;
+  top: 0;
+  opacity: 1;
+}
+#cssmenu ul ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  padding: 11px 25px;
+  width: 180px;
+  color: #777777;
+  background: #f2ffff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.1), -1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li.active > a {
+  color: #e60e5d;
+}
+#cssmenu ul ul li:first-child > a {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+#cssmenu ul ul li:last-child > a {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#cssmenu > ul > li > ul::after {
+  position: absolute;
+  display: block;
+}
+#cssmenu ul ul li.has-sub > a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-left-color: #777777;
+  right: 17px;
+  top: 14px;
+}
+#cssmenu ul ul li.has-sub.active > a::after,
+#cssmenu ul ul li.has-sub:hover > a::after {
+  border-left-color: #e60e5d;
+}
+@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #cssmenu {
+    background: #39b1cc;
+  }
+  #cssmenu > ul {
+    display: none;
+  }
+  #cssmenu > ul.open {
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  #cssmenu > ul > li {
+    float: none;
+  }
+  #cssmenu > ul > li > a {
+    padding: 18px 25px 18px 25px;
+    border-right: 0;
+  }
+  #cssmenu > ul > li:hover > a,
+  #cssmenu > ul > li.active > a {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  #cssmenu #menu-button {
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: #bdfdff;
+    padding: 18px 25px 18px 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: url('images/bg.png');
+    cursor: pointer;
+  }
+  #cssmenu ul ul,
+  #cssmenu ul li:hover > ul,
+  #cssmenu > ul > li > ul,
+  #cssmenu ul ul ul,
+  #cssmenu ul ul li:hover > ul {
+    left: 0;
+    top: auto;
+    opacity: 1;
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+  #cssmenu ul ul li {
+    width: 100%;
+  }
+  #cssmenu ul ul li a {
+    width: 100%;
+    box-shadow: none;
+    padding-left: 35px;
+  }
+  #cssmenu ul ul ul li a {
+    padding-left: 45px;
+  }
+  #cssmenu ul ul li:first-child > a,
+  #cssmenu ul ul li:last-child > a {
+    border-radius: 0;
+  }
+  #cssmenu #menu-button::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #bdfdff;
+    border-bottom: 2px solid #bdfdff;
+    right: 25px;
+    top: 18px;
+  }
+  #cssmenu #menu-button::before {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #bdfdff;
+    right: 25px;
+    top: 28px;
+  }
+  #cssmenu > ul > li.has-sub > a::after,
+  #cssmenu ul ul li.has-sub > a::after {
+    display: none;
+  }
+}
+
+
+
+span#e18            { /* images/vista%20previa001... */
+	background      : transparent url(images/vista%20previa001005.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 26.25pt;
+	top             : 19.5pt;
+	width           : 651pt;
+	height          : 118.5pt;
+	}
+div#e17             {
+	font            : 10pt 'Times New Roman', Book, Georgia, serif;
+	text-align      : left;
+	position        : absolute;
+	left            : 26.25pt;
+	top             : 178.5pt;
+	width           : 649.50pt;
+	height          : 307.5pt;
+	}
+div#e16             {
+	font            : 10pt 'Times New Roman', Book, Georgia, serif;
+	text-align      : left;
+	position        : absolute;
+	left            : 26.25pt;
+	top             : 488pt;
+	width           : 651pt;
+	height          : 18pt;
+	}
+h6#e15              { /* UGB */
+	text-align      : left;
+	position        : absolute;
+	left            : 29.25pt;
+	top             : 494.25pt;
+	width           : 260.25pt;
+	height          : 16.50pt;
+	}
+h6#e14              { /* APANDA copyright(C) 2014... */
+	text-align      : right;
+	position        : absolute;
+	left            : 286.50pt;
+	top             : 494.25pt;
+	width           : 387pt;
+	height          : 16.50pt;
+	}
+span#e13            { /* images/vista%20previa001... */
+	border          :   0.00pt none #225c96;
+	clip            : rect(0.00pt,256.50pt,0.75pt,0.00pt);
+	background      : transparent url(images/vista%20previa001004.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  40.50pt;
+	top             : 247.50pt;
+	width           : 256.50pt;
+	height          :   0.75pt;
+	}
+h4#e12              { /* Inicio */
+	text-align      : left;
+	position        : absolute;
+	left            :  39.00pt;
+	top             : 223.50pt;
+	width           : 251.25pt;
+	height          :  19.50pt;
+	}
+div#e11             {
+	font            : 10pt 'Times New Roman', Book, Georgia, serif;
+	text-align      : left;
+	position        : absolute;
+	left            : 503.25pt;
+	top             : 230.25pt;
+	width           : 157.50pt;
+	height          :  75.00pt;
+	}
+div#e10             {
+	font            : 10pt 'Times New Roman', Book, Georgia, serif;
+	text-align      : left;
+	position        : absolute;
+	left            : 503.25pt;
+	top             : 315.00pt;
+	width           : 157.50pt;
+	height          :  75.00pt;
+	}
+div#e9              {
+	font            : 10pt 'Times New Roman', Book, Georgia, serif;
+	text-align      : left;
+	position        : absolute;
+	left            : 503.25pt;
+	top             : 399.75pt;
+	width           : 157.50pt;
+	height          :  75.00pt;
+	}
+h5#e8               {
+	text-align      : left;
+	position        : absolute;
+	left            : 520.50pt;
+	top             : 238.50pt;
+	width           : 120.75pt;
+	height          :  14.25pt;
+	}
+div#e7              { /* Asiganacion de Rutas, Co... */
+	text-align      : left;
+	position        : absolute;
+	left            : 520.50pt;
+	top             : 258.00pt;
+	width           : 120.75pt;
+	height          :  36.75pt;
+	}
+div#e6              { /* Datos de los Lect@res  */
+	text-align      : left;
+	position        : absolute;
+	left            : 520.50pt;
+	top             : 341.25pt;
+	width           : 120.75pt;
+	height          :  12.75pt;
+	}
+div#e5              { /* Creacion de rutas y edic... */
+	text-align      : left;
+	position        : absolute;
+	left            : 520.50pt;
+	top             : 429.00pt;
+	width           : 120.75pt;
+	height          :  23.25pt;
+	}
+span#e4             { /* images/vista%20previa001... */
+	clip            : rect(0.00pt,15.00pt,8.25pt,0.00pt);
+	background      : transparent url(images/vista%20previa001003.gif) no-repeat top left;
+	position        : absolute;
+	left            :  55.50pt;
+	top             : 159.00pt;
+	width           :  15.00pt;
+	height          :   8.25pt;
+	}
+span#e3             { /* images/vista%20previa001... */
+	background      : transparent;
+	position        : absolute;
+	left            : 25.5pt;
+	top             : 242pt;
+	width           : 274.25pt;
+	height          : 228.33pt;
+
+	}
+span#e2             { /* images/vista%20previa001... */
+	background      : transparent url(images/vista%20previa001001.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 305.25pt;
+	top             : 250pt;
+	width           : 168.75pt;
+	height          : 119.25pt;
+	}
+div#e1              {
+	font            : 10pt 'Times New Roman', Book, Georgia, serif;
+	text-align      : left;
+	position        : absolute;
+	left            : 26.25pt;
+	top             : 138.00pt;
+	width           : 649.50pt;
+	height          : 39pt;
+	}
+div#page            { /* Page Holder */
+	position        : relative;
+	width           : 686.25pt;
+	height          : 525.00pt;
+	text-align      : left;
+	margin-left     : auto;
+	margin-right    : auto;
+	margin-top      : -15pt;
+	}
+body                { /* Page Body */
+	background-color: #ececec;
+	text-align      : center;
+	}
+
+
+
+
+
+/*--- EndOfFile ---*/
